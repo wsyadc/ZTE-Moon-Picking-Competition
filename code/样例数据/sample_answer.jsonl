@@ -1,0 +1,60 @@
+{"question_id": 1, "answer": "SELECT TYPE FROM ship WHERE Tonnage  >  6000 INTERSECT SELECT TYPE FROM ship WHERE Tonnage  <  4000"}
+{"question_id": 2, "answer": "SELECT avg(num_employees) FROM department WHERE ranking BETWEEN 10 AND 15"}
+{"question_id": 3, "answer": "SELECT name FROM church ORDER BY open_date DESC"}
+{"question_id": 4, "answer": "SELECT Nationality FROM journalist WHERE Years_working  >  10 INTERSECT SELECT Nationality FROM journalist WHERE Years_working  <  3"}
+{"question_id": 5, "answer": "SELECT country_code FROM players GROUP BY country_code HAVING count(*)  >  50"}
+{"question_id": 6, "answer": "SELECT lake_name FROM lake;"}
+{"question_id": 7, "answer": "SELECT t2.name FROM director AS t2 JOIN directed_by AS t1 ON t2.did  =  t1.did JOIN tv_series AS t3 ON t3.sid  =  t1.msid WHERE t3.release_year  =  2013 AND t3.title  =  \"House of Cards\";"}
+{"question_id": 8, "answer": "SELECT t3.house_number  ,  t1.name FROM restaurant AS t1 JOIN geographic AS t2 ON t1.city_name  =  t2.city_name JOIN LOCATION AS t3 ON t1.id  =  t3.restaurant_id WHERE t2.region  =  \"yosemite and mono lake area\" AND t1.food_type  =  \"french\" AND t1.rating  >  2.5;"}
+{"question_id": 9, "answer": "SELECT count(*) FROM pets WHERE weight  >  10"}
+{"question_id": 10, "answer": "SELECT count(*) FROM inventory WHERE store_id  =  1"}
+{"question_id": 11, "answer": "A"}
+{"question_id": 12, "answer": "C"}
+{"question_id": 13, "answer": "D"}
+{"question_id": 14, "answer": "C"}
+{"question_id": 15, "answer": "D"}
+{"question_id": 16, "answer": "C"}
+{"question_id": 17, "answer": "B"}
+{"question_id": 18, "answer": "B"}
+{"question_id": 19, "answer": "B"}
+{"question_id": 20, "answer": "B"}
+{"question_id": 21, "answer": "True"}
+{"question_id": 22, "answer": "False"}
+{"question_id": 23, "answer": "False"}
+{"question_id": 24, "answer": "False"}
+{"question_id": 25, "answer": "False"}
+{"question_id": 26, "answer": "True"}
+{"question_id": 27, "answer": "False"}
+{"question_id": 28, "answer": "False"}
+{"question_id": 29, "answer": "False"}
+{"question_id": 30, "answer": "True"}
+{"question_id": 31, "answer": "SELECT name FROM captain ORDER BY age DESC"}
+{"question_id": 32, "answer": "SELECT count(DISTINCT degree_summary_name) FROM Degree_Programs"}
+{"question_id": 33, "answer": "SELECT Enrollment FROM school WHERE Denomination != \"Catholic\""}
+{"question_id": 34, "answer": "SELECT area FROM state WHERE state_name  =  \"new mexico\";"}
+{"question_id": 35, "answer": "SELECT count(*) ,  Competition FROM MATCH GROUP BY Competition"}
+{"question_id": 36, "answer": "SELECT T2.name FROM Friend AS T1 JOIN Highschooler AS T2 ON T1.student_id  =  T2.id GROUP BY T1.student_id HAVING count(*)  >=  3"}
+{"question_id": 37, "answer": "SELECT T1.Service_Type_Description ,  T2.Service_Type_Code ,  COUNT(*) FROM Ref_Service_Types AS T1 JOIN Services AS T2 ON T1.Service_Type_Code  =  T2.Service_Type_Code GROUP BY T2.Service_Type_Code"}
+{"question_id": 38, "answer": "SELECT count(*) FROM Project_outcomes WHERE outcome_code  =  'Patent'"}
+{"question_id": 39, "answer": "SELECT T2.name ,  T2.location FROM race AS T1 JOIN track AS T2 ON T1.track_id  =  T2.track_id GROUP BY T1.track_id HAVING count(*)  =  1"}
+{"question_id": 40, "answer": "SELECT DISTINCT t2.paperid FROM paperkeyphrase AS t5 JOIN keyphrase AS t3 ON t5.keyphraseid  =  t3.keyphraseid JOIN writes AS t4 ON t4.paperid  =  t5.paperid JOIN paper AS t2 ON t4.paperid  =  t2.paperid JOIN author AS t1 ON t4.authorid  =  t1.authorid JOIN venue AS t6 ON t6.venueid  =  t2.venueid WHERE t1.authorname  =  \"Eric C. Kerrigan\" AND t3.keyphrasename  =  \"Liquid\" AND t6.venuename  =  \"Automatica\";"}
+{"question_id": 41, "answer": "False"}
+{"question_id": 42, "answer": "True"}
+{"question_id": 43, "answer": "True"}
+{"question_id": 44, "answer": "True"}
+{"question_id": 45, "answer": "True"}
+{"question_id": 46, "answer": "True"}
+{"question_id": 47, "answer": "True"}
+{"question_id": 48, "answer": "True"}
+{"question_id": 49, "answer": "True"}
+{"question_id": 50, "answer": "True"}
+{"question_id": 51, "answer": "C"}
+{"question_id": 52, "answer": "A"}
+{"question_id": 53, "answer": "D"}
+{"question_id": 54, "answer": "A"}
+{"question_id": 55, "answer": "A"}
+{"question_id": 56, "answer": "A"}
+{"question_id": 57, "answer": "B"}
+{"question_id": 58, "answer": "A"}
+{"question_id": 59, "answer": "A"}
+{"question_id": 60, "answer": "C"}

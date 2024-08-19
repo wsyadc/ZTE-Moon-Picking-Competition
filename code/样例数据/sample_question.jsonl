@@ -1,0 +1,60 @@
+{"question_id": 1, "question_type": "text2sql", "user_question": "既有吨位大于6000的船舶又有吨位小于4000的船舶的船舶类型是什么？", "db_id": "ship_mission"}
+{"question_id": 2, "question_type": "text2sql", "user_question": "排名在10到15之间的部门的平均雇员人数是多少？", "db_id": "department_management"}
+{"question_id": 3, "question_type": "text2sql", "user_question": "以开放日期的降序列出所有教堂名称。", "db_id": "wedding"}
+{"question_id": 4, "question_type": "text2sql", "user_question": "Show the nations that have both journalists with more than 10 years of working and journalists with less than 3 years of working.", "db_id": "news_report"}
+{"question_id": 5, "question_type": "text2sql", "user_question": "拥有超过50名球员的国家的代码是什么？", "db_id": "wta_1"}
+{"question_id": 6, "question_type": "text2sql", "user_question": "name all the lakes of us", "db_id": "geo"}
+{"question_id": 7, "question_type": "text2sql", "user_question": "Who is the director of the tv series \" House of Cards \" from 2013 ?", "db_id": "imdb"}
+{"question_id": 8, "question_type": "text2sql", "user_question": "give me a good french restaurant in the yosemite and mono lake area ?", "db_id": "restaurants"}
+{"question_id": 9, "question_type": "text2sql", "user_question": "Find the number of pets whose weight is heavier than 10.", "db_id": "pets_1"}
+{"question_id": 10, "question_type": "text2sql", "user_question": "统计商店1库存物品的数量。", "db_id": "sakila_1"}
+{"question_id": 11, "question_type": "multiple_choice", "user_question": "在SQL中,与“NOT IN”等价的操作符是", "optionA": "<>ALL", "optionB": "<>SOME", "optionC": "=SOME", "optionD": "=ALL"}
+{"question_id": 12, "question_type": "multiple_choice", "user_question": "有学生表Student(Sno char(8), Sname char(10), Ssex char(2), Sage integer, Dno char(2), Sclass char(6))。要检索学生表中“所有年龄小于等于18岁的学生的年龄及姓名”，SQL语句正确的是", "optionA": "Select Sage, Sname From Student ;", "optionB": "Select * From Student Where Sage <= 18;", "optionC": "Select Sage, Sname From Student Where Sage <= 18;", "optionD": "Select Sname From Student Where Sage <= 18;"}
+{"question_id": 13, "question_type": "multiple_choice", "user_question": "有关系S(SNO, SNAME, SDEPT,SAGE)，C(CNO, CNAME)，SC(SNO, CNO, GRADE)。其中SNO是学生号，SNAME是学生姓名，SDEPT是系别,SAGE是学生年龄， CNO是课程号，CNAME是课程名称，GRADE是成绩。下列查询语句语法正确的是", "optionA": "DELETE FROM S,SC WHERE S.Sno=SC.Sno AND Sname LIKE '李%' （多表删除需要联表）", "optionB": "UPDATE FROM SC SET Grade=Grade+10 WHERE Sno = (SELECT Sno FROM SC WHERE Grade <60) （= 应该改为 in ）", "optionC": "SELECT S1.Sno,Sname FROM S1 JOIN SC ON S1.Sno = SC.Sno WHERE Grade >= min(Grade) （where 中不要使用 聚合函数）", "optionD": "SELECT S1.Sno,Sname FROM (SELECT Sno,Sname FROM S WHERE Sdept='计算机' ) S1 JOIN SC ON S1.Sno = SC.Sno WHERE Grade >=60"}
+{"question_id": 14, "question_type": "multiple_choice", "user_question": "SQL集数据查询、数据操纵、数据定义和数据控制功能于一体,语句ALTER TABLE实现下列哪类功能", "optionA": "数据查询", "optionB": "数据操纵", "optionC": "数据定义", "optionD": "数据控制"}
+{"question_id": 15, "question_type": "multiple_choice", "user_question": "假定学生关系是S(SNo, SName, Sex, Age),课程关系是C(CNo, CName, Teacher),学生选课关系是SC(SNo, CNo, Grade)，一个学生可以选修多门课程，一门课程可以有多个学生选修，有的学生没有选课，有的课程没有学生选课，要查找所有学生的学号以及选修的课程号，正确的SQL语句是", "optionA": "SELECT SNO,CNO FROM GRADE", "optionB": "SELECT S.SNO,CNO FROM S INNER JOIN SC ON S.SNO=SC.SNO", "optionC": "SELECT S.SNO,CNO FROM S OUTER JOIN SC ON S.SNO=SC.SNO", "optionD": "SELECT S.SNO,CNO FROM S LEFT JOIN SC ON S.SNO=SC.SNO"}
+{"question_id": 16, "question_type": "multiple_choice", "user_question": "假定学生关系是S(SNo, SName, Sex, Age),课程关系是C(CNo, CName, Teacher),学生选课关系是SC(SNo, CNo, Grade)。要查找选修4门以上(含4门)课程的学生总成绩（不统计不及格的课程），正确的SQL语句是", "optionA": "SELECT Sno, SUM(Grade) FROM SC WHERE Grade>=60 GROUP BY Sno HAVING COUNT(*)>=4", "optionB": "SELECT Sno, COUNT(*), SUM(Grade) FROM SC GROUP BY Sno HAVING Grade>=60 and COUNT(*)>=4", "optionC": "SELECT Sno, COUNT(*), SUM(Grade) FROM SC WHERE Grade>=60 GROUP BY Sno HAVING COUNT(*)>=4", "optionD": "SELECT Sno, SUM(Grade) FROM SC WHERE Grade>=60 and COUNT(*)>=4 GROUP BY Sno"}
+{"question_id": 17, "question_type": "multiple_choice", "user_question": "下列（ ）能查询出字段Col的第三个字母是R，但不以W结尾的字符串？", "optionA": "WHERE Col Like ‘_%R%[^W]’", "optionB": "WHERE Col Like ‘__R%[^W]’", "optionC": "WHERE Col Like ‘__R%[W]’", "optionD": "WHERE Col =‘__R%[^W]’"}
+{"question_id": 18, "question_type": "multiple_choice", "user_question": "下列不是数据定义语言DDL的是", "optionA": "CREATE", "optionB": "SELECT", "optionC": "ALTER", "optionD": "DROP"}
+{"question_id": 19, "question_type": "multiple_choice", "user_question": "聚合函数中,操作对象可以是元组的函数是", "optionA": "AVG", "optionB": "COUNT", "optionC": "SUM", "optionD": "MAX"}
+{"question_id": 20, "question_type": "multiple_choice", "user_question": "有关系S(SNO, SNAME, SDEPT,SAGE)，C(CNO, CNAME)，SC(SNO, CNO, GRADE)。其中SNO是学生号，SNAME是学生姓名，SDEPT是系别,SAGE是学生年龄， CNO是课程号，CNAME是课程名称，GRADE是成绩。要查询“计算机”系的没有不及格成绩的学生学号和姓名。", "optionA": "SELECT Sno, Sname FROM S WHERE Sdept='计算机’ INTERSECT SELECT Sno, Sname FROM SC WHERE GRADE>=60", "optionB": "SELECT Sno, Sname FROM S WHERE Sdept='计算机’and sno not in (SELECT SNO FROM SC WHERE GRADE<60)", "optionC": "SELECT Sno, Sname FROM S WHERE Sdept='计算机’ EXCEPT SELECT SNO FROM SC WHERE GRADE<60", "optionD": "SELECT Sno, Sname FROM S WHERE Sdept='计算机’and sno in (SELECT SNO FROM SC WHERE GRADE>=60)"}
+{"question_id": 21, "question_type": "true_false_question", "user_question": "SQL中，SELECT * 是用来选择表中所有列的数据。"}
+{"question_id": 22, "question_type": "true_false_question", "user_question": "在SQL中，UPDATE 语句可以用来删除记录。"}
+{"question_id": 23, "question_type": "true_false_question", "user_question": "INNER JOIN 和 OUTER JOIN 在SQL中是相同的。"}
+{"question_id": 24, "question_type": "true_false_question", "user_question": "GROUP BY 语句可以与任何SQL函数一起使用。"}
+{"question_id": 25, "question_type": "true_false_question", "user_question": "在SQL中，NULL 值与空字符串是相同的。"}
+{"question_id": 26, "question_type": "true_false_question", "user_question": "使用 LIKE 运算符时，可以使用 % 来匹配任意字符的任意数量。"}
+{"question_id": 27, "question_type": "true_false_question", "user_question": "在SQL中，DROP TABLE 和 DELETE TABLE 是相同的操作。"}
+{"question_id": 28, "question_type": "true_false_question", "user_question": "一条 INSERT INTO 语句可以同时向多个表插入数据。"}
+{"question_id": 29, "question_type": "true_false_question", "user_question": "SQL语句在执行前不需要被编译。"}
+{"question_id": 30, "question_type": "true_false_question", "user_question": "使用 HAVING 子句可以过滤聚合函数的结果，而不是在 WHERE 子句之前过滤。"}
+{"question_id": 31, "question_type": "text2sql", "user_question": "把船长的姓名按年龄从老到年轻分类。", "db_id": "ship_1"}
+{"question_id": 32, "question_type": "text2sql", "user_question": "授予多少个不同的学位？", "db_id": "student_transcripts_tracking"}
+{"question_id": 33, "question_type": "text2sql", "user_question": "What are the enrollments of schools whose denomination is not \"Catholic\"?", "db_id": "school_player"}
+{"question_id": 34, "question_type": "text2sql", "user_question": "what is the area of new mexico", "db_id": "geo"}
+{"question_id": 35, "question_type": "text2sql", "user_question": "找出在不同的比赛中比赛的数量。", "db_id": "city_record"}
+{"question_id": 36, "question_type": "text2sql", "user_question": "显示至少有3个朋友的高中生的名字。", "db_id": "network_1"}
+{"question_id": 37, "question_type": "text2sql", "user_question": "列出每个服务类型的描述、代码和服务数量。", "db_id": "cre_Drama_Workshop_Groups"}
+{"question_id": 38, "question_type": "text2sql", "user_question": "How many Patent outcomes are generated from all the projects?", "db_id": "tracking_grants_for_research"}
+{"question_id": 39, "question_type": "text2sql", "user_question": "显示有1个比赛的赛道的名称和位置。", "db_id": "race_track"}
+{"question_id": 40, "question_type": "text2sql", "user_question": "Eric C. Kerrigan 's Liquid Automatica paper", "db_id": "scholar"}
+{"question_id": 41, "question_type": "true_false_question", "user_question": "GROUP BY 语句可以与任何SQL函数一起使用。"}
+{"question_id": 42, "question_type": "true_false_question", "user_question": "SQL语句中，'LIKE'操作符用于执行模糊匹配。"}
+{"question_id": 43, "question_type": "true_false_question", "user_question": "SQL中的'AS'关键字用于重命名表或列的别名。"}
+{"question_id": 44, "question_type": "true_false_question", "user_question": "SQL的'DROP TABLE'语句用于删除整个表。"}
+{"question_id": 45, "question_type": "true_false_question", "user_question": "SQL的'UPDATE ... JOIN ...'语句用于更新表中的数据基于另一个表的条件。"}
+{"question_id": 46, "question_type": "true_false_question", "user_question": "SQL的'RIGHT JOIN'结果包括右表中的所有行，即使左表中没有匹配的行。"}
+{"question_id": 47, "question_type": "true_false_question", "user_question": "SQL的'DROP DATABASE'语句用于删除一个数据库及其所有数据。"}
+{"question_id": 48, "question_type": "true_false_question", "user_question": "SQL的'SHOW VARIABLES'命令用于显示系统变量及其值。"}
+{"question_id": 49, "question_type": "true_false_question", "user_question": "SQL的'BLOB'数据类型用于存储二进制数据，如图片或文件。"}
+{"question_id": 50, "question_type": "true_false_question", "user_question": "SQL的'SET'数据类型用于存储一组可能的值。"}
+{"question_id": 51, "question_type": "multiple_choice", "user_question": "某软件公司正在升级一套水务管理系统。该系统用于县市级供排水企业、供水厂、排水厂中水务数据的管理工作。系统经重新整合后，开发人员决定不再使用一张备份数据表waterinfo001表，需永久删除。选出符合要求的语句。", "optionA": "DELETE TABLE waterinfo001", "optionB": "DELETE FROM TABLE waterinfo001", "optionC": "DROP TABLE waterinfo001", "optionD": "DROP FROM TABLE waterinfo001"}
+{"question_id": 52, "question_type": "multiple_choice", "user_question": "修改表test_tbl字段i的缺省值为1000，可以使用哪个SQL语句？", "optionA": "ALTER TABLE test_tbl ALTER i SET DEFAULT 1000;", "optionB": "ALTER TABLE test_tbl i SET DEFAULT 1000;", "optionC": "ALTER TABLE test_tbl MODIFY i SET DEFAULT 1000;", "optionD": "ALTER TABLE test_tbl CHANGE i SET DEFAULT 1000;"}
+{"question_id": 53, "question_type": "multiple_choice", "user_question": "检索销量表中销量最好的商品id和销量（假设每件商品只有一个订单），下列哪个是SQL语句正确的？", "optionA": "SELECT 商品id,销量 FROM 销量表 WHERE 销量=MAX(销量)", "optionB": "SELECT 商品id,MAX(销量) FROM 销量表 GROUP BY 销量", "optionC": "SELECT 商品id,MAX(销量) FROM 销量表 GROUP BY 商品id", "optionD": "SELECT 商品id,销量 FROM 销量表 WHERE 销量=(SELECT MAX(销量) FROM 销量表)"}
+{"question_id": 54, "question_type": "multiple_choice", "user_question": "SQL语句用于列出所有具有至少一个行的表的名称是什么？", "optionA": "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_ROWS > 0", "optionB": "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES", "optionC": "SHOW TABLES HAVING COUNT(*) > 0", "optionD": "LIST TABLES WITH ROWS"}
+{"question_id": 55, "question_type": "multiple_choice", "user_question": "在SQL中，哪一个函数可以用来计算列中值的总和？", "optionA": "SUM", "optionB": "TOTAL", "optionC": "COUNT", "optionD": "ADD"}
+{"question_id": 56, "question_type": "multiple_choice", "user_question": "如何在SQL中创建一个唯一索引？", "optionA": "CREATE UNIQUE INDEX idx_name ON table_name (column_name);", "optionB": "CREATE INDEX UNIQUE idx_name ON table_name (column_name);", "optionC": "INDEX CREATE UNIQUE idx_name ON table_name (column_name);", "optionD": "ADD UNIQUE INDEX idx_name ON table_name (column_name);"}
+{"question_id": 57, "question_type": "multiple_choice", "user_question": "在数据库中，哪种类型的键确保表中每行的唯一性？", "optionA": "Foreign key", "optionB": "Primary key", "optionC": "Secondary key", "optionD": "Composite key"}
+{"question_id": 58, "question_type": "multiple_choice", "user_question": "选择正确的SQL语句来插入一个新行到表customers。", "optionA": "INSERT INTO customers VALUES (...);", "optionB": "ADD INTO customers VALUES (...);", "optionC": "INSERT customers VALUES (...);", "optionD": "ADD NEW ROW INTO customers VALUES (...);"}
+{"question_id": 59, "question_type": "multiple_choice", "user_question": "要更新已有表中的数据，以下哪个SQL语句是正确的？", "optionA": "UPDATE table_name SET column1 = value1 WHERE condition;", "optionB": "CHANGE table_name SET column1 = value1 WHERE condition;", "optionC": "MODIFY table_name SET column1 = value1 WHERE condition;", "optionD": "ALTER table_name SET column1 = value1 WHERE condition;"}
+{"question_id": 60, "question_type": "multiple_choice", "user_question": "在SQL中，哪一个关键字用来从数据库中删除数据？", "optionA": "REMOVE", "optionB": "DROP", "optionC": "DELETE", "optionD": "CUT"}
